@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>patterns</title>
+</head>
+<body>
+	<div id="background">
+	</div>
+	<input type="button" name="pattern" value="1" id="button">
+</script>
+<style type="text/css">
+	#background {
+		height: 1000px;
+		width: 100%;
+	}
+	#button {
+		position: fixed;
+		bottom: 5px;
+		right: 5px;
+	}
+</style>
+
+<script type="text/javascript">
+	var currPattern = 1;
+	var background = document.getElementById('background');
+	function changePattern() {
+		background.style.background = 'url(pattern-' + currPattern + '-min.svg)';
+		button.value = currPattern;
+		currPattern++;
+	}
+
+
+
+	document.getElementById('button').addEventListener('click', changePattern);
+
+</script>
+</body>
+</html>
